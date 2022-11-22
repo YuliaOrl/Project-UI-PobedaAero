@@ -75,14 +75,14 @@ gradle clean test -Denv=remote
 * <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты. По-умолчанию - <code>1920x1080</code>.
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/Auto%20testing%20main%20page%20Pobeda.aero/">*Jenkins job*</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/Yulia%20Orlova%20Project%20auto%20testing%20UI%20Pobeda.aero/">*Jenkins job*</a>
 
 <p align="center">
 <img title="Jenkins Build" src="images/screenshots/jenkinsBuild.png">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_Report.svg"> Allure-отчет
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/Auto%20testing%20main%20page%20Pobeda.aero/10/allure/">*Overview*</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/Yulia%20Orlova%20Project%20auto%20testing%20UI%20Pobeda.aero/5/allure/">*Overview*</a>
 
 <p align="center">
 <img title="Allure Overview" src="images/screenshots/allureReportMain.png">
@@ -106,13 +106,25 @@ gradle clean test -Denv=remote
 ### *Allure TestOps* <a target="_blank" href="https://allure.autotests.cloud/project/1669/dashboards">*Dashboard*</a>
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="images/screenshots/AllureTestOpsDashboard.png">  
+<img title="Allure TestOps Dashboard" src="images/screenshots/allureTestOpsDashboard.png">  
 </p>  
 
 ### *Тест кейсы*
 
 <p align="center">  
-<img title="Allure TestOps Tests" src="images/screenshots/AllureTestOpsTestCases.png">  
+<img title="Allure TestOps Tests" src="images/screenshots/allureTestOpsTestCases.png">  
+</p>
+
+### *Запуски*
+
+<p align="center">  
+<img title="Allure TestOps Tests" src="images/screenshots/allureTestOpsLaunches.png">  
+</p>
+
+### *Результаты прохождения тестов*
+
+<p align="center">  
+<img title="Allure TestOps Tests" src="images/screenshots/allureTestOpsResult.png">  
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Уведомление в Telegram с использованием бота
