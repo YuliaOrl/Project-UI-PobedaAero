@@ -15,7 +15,7 @@
 <p align="center">
 <img width="6%" title="Java" src="images/logo/Java.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
-<img width="6%" title="Allure Report" src="images/logo/AllureTestOps.svg">
+<img width="6%" title="Allure TestOps" src="images/logo/AllureTestOps.svg">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
 <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
@@ -27,7 +27,7 @@
 </p>
 
 Параметризованные автотесты написаны на <code>Java</code> с использованием <code>Gradle</code> и <code>JUnit 5</code>.
-Для UI-тестов используется фреймворк [Selenide](https://selenide.org/).
+Для UI тестов используется фреймворк [Selenide](https://selenide.org/).
 Тесты можно запускать локально или удаленно с помощью [Selenoid](https://aerokube.com/selenoid/).
 Сборка в <code>Jenkins</code> реализована с формированием Allure-отчета и отправкой уведомления с результатами тестирования в <code>Telegram</code> после завершения прохождения тестов.
 
@@ -36,7 +36,7 @@ Allure-отчет включает в себя:
 * скриншот страницы в браузере в момент завершения автотеста;
 * Page Source;
 * логи браузерной консоли;
-* видео выполнения UI-тестов.
+* видео выполнения UI тестов.
 
 ## :running_woman: Варианты запуска тестов
 
