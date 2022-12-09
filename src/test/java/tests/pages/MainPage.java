@@ -2,7 +2,9 @@ package tests.pages;
 
 import com.codeborne.selenide.CollectionCondition;
 import tests.Lang;
+
 import java.util.List;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
@@ -39,7 +41,7 @@ public class MainPage {
     public MainPage choiceLanguage(Lang lang) {
         step(String.format("Выбор языка \"%s\"", lang), () -> {
             $("#idLanguageSelector").pressEnter();
-            $$(".ui-dropdown_item_option_name").find(text(lang.name())).click();
+            $$(".ui-dropdown_item_option_name").find(text(lang.toString())).click();
         });
         return this;
     }
@@ -50,7 +52,7 @@ public class MainPage {
         return this;
     }
 
-    public MainPage checkButtonExist(List<String> expectedButtons) {
+    public MainPage checkExistsButtons(List<String> expectedButtons) {
         step(String.format("Проверка отображения кнопок меню %s", expectedButtons), () ->
                 $$(".button_label").filter(visible).shouldHave(CollectionCondition.texts(expectedButtons)));
         return this;

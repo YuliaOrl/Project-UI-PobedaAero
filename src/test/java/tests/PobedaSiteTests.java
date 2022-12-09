@@ -10,18 +10,19 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 import tests.pages.MainPage;
+
 import java.util.List;
 import java.util.stream.Stream;
 
 @Owner("yuliaorlova")
 @Feature("UI тесты")
 @DisplayName("UI тесты для сайта Pobeda.aero")
+@Tags({@Tag("web"), @Tag("high"), @Tag("critical")})
+@Severity(SeverityLevel.CRITICAL)
 public class PobedaSiteTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
-    @Tags({@Tag("web"), @Tag("high"), @Tag("critical")})
-    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка перехода в разделы сайта.")
     @ValueSource(strings = {"Ручная кладь", "Багаж", "Выбор места", "Страхование"})
     @ParameterizedTest(name = "Выполняется переход в раздел \"{0}\"")
@@ -40,8 +41,6 @@ public class PobedaSiteTests extends TestBase {
         );
     }
 
-    @Tags({@Tag("web"), @Tag("high"), @Tag("critical")})
-    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличия разделов сайта.")
     @MethodSource
     @ParameterizedTest(name = "Для локали {0} отображаются разделы {1}")
@@ -56,12 +55,10 @@ public class PobedaSiteTests extends TestBase {
     static Stream<Arguments> sitePobedaMenuEnumTest() {
         return Stream.of(
                 Arguments.of(Lang.ENGLISH, List.of("Online check-in", "Manage my booking", "Info/Rules")),
-                Arguments.of(Lang.РУССКИЙ, List.of("Забронировать билет", "Управление бронированием", "Онлайн-регистрация", "Информация"))
+                Arguments.of(Lang.RUSSIAN, List.of("Забронировать билет", "Управление бронированием", "Онлайн-регистрация", "Информация"))
         );
     }
 
-    @Tags({@Tag("web"), @Tag("high"), @Tag("critical")})
-    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличия кнопок меню сайта.")
     @MethodSource
     @ParameterizedTest(name = "Для локали {0} отображаются кнопки меню {1}")
@@ -69,7 +66,7 @@ public class PobedaSiteTests extends TestBase {
 
         mainPage.openMainPage();
         mainPage.choiceLanguage(lang);
-        mainPage.checkButtonExist(expectedButtons);
+        mainPage.checkExistsButtons(expectedButtons);
     }
 
 
@@ -80,8 +77,6 @@ public class PobedaSiteTests extends TestBase {
             "способ оплаты, Способы оплаты"
     })
 
-    @Tags({@Tag("web"), @Tag("high"), @Tag("critical")})
-    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка работы поиска.")
     @ParameterizedTest(name = "Результаты поиска содержат текст \"{1}\" для запроса \"{0}\"")
     void sitePobedaSearchTest(String testData, String expectedResult) {
@@ -92,8 +87,6 @@ public class PobedaSiteTests extends TestBase {
     }
 
 
-    @Tags({@Tag("web"), @Tag("high"), @Tag("critical")})
-    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка нотификации обязательности заполнение поля ввода Email для подписки.")
     @EnumSource(Lang.class)
     @ParameterizedTest(name = "Для локали {0} проверяется заполнение Email")

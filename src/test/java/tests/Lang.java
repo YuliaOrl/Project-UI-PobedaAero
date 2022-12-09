@@ -1,6 +1,18 @@
 package tests;
 
 public enum Lang {
-    ENGLISH, РУССКИЙ
+    ENGLISH("ENGLISH"),
+    RUSSIAN("РУССКИЙ");
+
+    private final String description;
+
+    Lang(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return description;
+    }
 }
 
